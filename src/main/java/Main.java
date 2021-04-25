@@ -4,12 +4,15 @@ public class Main {
 
 
     public static void main(String[] args){
+
+        System.out.println("Hola mundo");
+
         double nota;
         int opcion;
         Formula formula = new Formula();
         Scanner teclado = new Scanner(System.in);
 
-        System.out.printf("Selecione pais");
+        System.out.println("Selecione pais");
         System.out.println("1.- Argentina");
         System.out.println("2.- Peru");
         System.out.println("3.- Bolivia");
