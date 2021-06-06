@@ -1,26 +1,45 @@
+//import java.util.concurrent.ForkJoinPool;
+
 public class Formula {
 
-    public double formulaPeruana(double x){
+    private double nota;
+    private int num1;
+    private int num2;
+    private double denominador;
+    private double convercionChilena;
+    private double resultado;
 
-        double convercionChilena = (x-11)*3/9 + 4;
+    public Formula(){}
 
-        return convercionChilena;
-
+    public Formula(double nota, int num1, double denominador){
+        this.nota = nota;
+        this.num1 = num1;
+        this.num2 = num2;
+        this.denominador = denominador;
     }
 
-    public double formulaArgentina(double x){
-
-        double convercionChilena = (x - 6)*3/4 + 4;
-
-        return convercionChilena;
-
+    public Formula(double nota, int num1, int num2){
+        this.nota = nota;
+        this.num1 = num1;
+        this.num2 = num2;
     }
 
-    public double formulaBoliviana(double x){
-
-        double conversionChilena = (x-50)*3/50 + 4;
-
-        return conversionChilena;
+    //obtener la nota que se ingresa por consola
+    public double getNota() {
+        return nota;
     }
+    //se crea la formula
+    public void crearFormula(){
+        resultado = ((nota - num1) * (3 / denominador)) + 4;
+    }
+    //este crea la formula para convertirlo a notacion chilena
+    public void crearFormulaCl(){
+        resultado = (((num1*(nota - 4))/3) + num2);
+    }
+
+    public double getResultado() {
+        return resultado;
+    }
+
 
 }
